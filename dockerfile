@@ -9,7 +9,7 @@ RUN mkdir -p /data/www
 #设置工作区间
 WORKDIR /data/www
 
-EXPOSE 80
+COPY ./ /data/www
 
 RUN npm config set unsafe-perm true
 
@@ -19,5 +19,5 @@ RUN npm install pm2 -g
 RUN cd /data/www \
 	npm install
 
-#RUN pm2 start index.js	
+RUN pm2 start index.js	
 # CMD [ "node index.js" ]
