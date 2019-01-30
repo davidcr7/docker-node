@@ -19,5 +19,5 @@ RUN npm install pm2 -g
 RUN cd /data/www \
 	npm install
 
-RUN pm2 start index.js	
-# CMD [ "node index.js" ]
+# RUN pm2 start index.js	
+CMD [ "node index.js" ]
